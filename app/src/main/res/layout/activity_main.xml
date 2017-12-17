@@ -10,6 +10,7 @@
     android:scaleType="centerCrop"
     tools:context="com.sardegnaisoladicavalli.example.showjumpingchrono.MainActivity">
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,6 +35,7 @@
                     android:layout_marginTop="@dimen/text_margin"
                     android:gravity="center_horizontal"
                     android:text="@string/rider_name"
+                    android:textColor="@color/textColor"
                     android:textSize="@dimen/fontSizeTitleBig" />
 
                 <TextView
@@ -44,6 +46,7 @@
                     android:layout_marginTop="@dimen/text_margin"
                     android:gravity="center_horizontal"
                     android:text="@string/horse_name"
+                    android:textColor="@color/textColor"
                     android:textSize="@dimen/fontSizeTitle" />
 
                 <Chronometer
@@ -51,6 +54,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
+                    android:textColor="@color/ButtonNormal"
                     android:textSize="@dimen/chronoSize" />
 
                 <LinearLayout
@@ -68,7 +72,8 @@
                         android:layout_marginRight="@dimen/button_sideMargin"
                         android:layout_marginTop="@dimen/button_margin"
                         android:layout_weight="1"
-                        android:text="@string/one_pen" />
+                        android:text="@string/one_pen"
+                        android:textColor="@color/textColor" />
 
                     <Button
                         android:id="@+id/four_pens"
@@ -79,7 +84,8 @@
                         android:layout_marginRight="@dimen/button_sideMargin"
                         android:layout_marginTop="@dimen/button_margin"
                         android:layout_weight="1"
-                        android:text="@string/four_pens" />
+                        android:text="@string/four_pens"
+                        android:textColor="@color/textColor" />
 
                 </LinearLayout>
 
@@ -98,14 +104,16 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/chrono_start" />
+                        android:text="@string/chrono_start"
+                        android:textColor="@color/textColor" />
 
                     <Button
                         android:id="@+id/stopButton"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="@string/chrono_stop" />
+                        android:text="@string/chrono_stop"
+                        android:textColor="@color/textColor" />
 
                 </LinearLayout>
 
@@ -146,12 +154,14 @@
                         android:layout_marginRight="@dimen/text_margin"
                         android:padding="@dimen/table_element_padding"
                         android:text="@string/table_layout_chrono"
-                        android:textAllCaps="true" />
+                        android:textAllCaps="true"
+                        android:textColor="@color/scoreColor" />
 
                     <TextView
                         android:gravity="center"
                         android:padding="@dimen/table_element_padding"
-                        android:text="0" />
+                        android:text="0"
+                        android:textColor="@color/scoreColor" />
                 </TableRow>
 
                 <TableRow>
@@ -161,12 +171,14 @@
                         android:layout_marginRight="@dimen/text_margin"
                         android:padding="@dimen/table_element_padding"
                         android:text="@string/table_layout_course_pens"
-                        android:textAllCaps="true" />
+                        android:textAllCaps="true"
+                        android:textColor="@color/scoreColor" />
 
                     <TextView
                         android:gravity="center"
                         android:padding="@dimen/table_element_padding"
-                        android:text="0" />
+                        android:text="0"
+                        android:textColor="@color/scoreColor" />
                 </TableRow>
 
                 <TableRow>
@@ -176,12 +188,14 @@
                         android:layout_marginRight="@dimen/text_margin"
                         android:padding="@dimen/table_element_padding"
                         android:text="@string/table_layout_time_pens"
-                        android:textAllCaps="true" />
+                        android:textAllCaps="true"
+                        android:textColor="@color/scoreColor" />
 
                     <TextView
                         android:gravity="center"
                         android:padding="@dimen/table_element_padding"
-                        android:text="0" />
+                        android:text="0"
+                        android:textColor="@color/scoreColor" />
                 </TableRow>
 
                 <TableRow>
@@ -191,12 +205,14 @@
                         android:layout_marginRight="@dimen/text_margin"
                         android:padding="@dimen/table_element_padding"
                         android:text="@string/table_layout_total_pens"
-                        android:textAllCaps="true" />
+                        android:textAllCaps="true"
+                        android:textColor="@color/scoreColor" />
 
                     <TextView
                         android:gravity="center"
                         android:padding="@dimen/table_element_padding"
-                        android:text="0" />
+                        android:text="0"
+                        android:textColor="@color/scoreColor" />
                 </TableRow>
 
             </TableLayout>
@@ -208,11 +224,13 @@
                 android:layout_below="@id/result_table"
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="@dimen/screenBottom_margin"
-                android:text="@string/reset" />
+                android:text="@string/reset"
+                android:textColor="@color/textColor" />
 
         </RelativeLayout>
 
 
     </ScrollView>
+
 
 </LinearLayout>

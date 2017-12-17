@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FF9800</color>
-    <color name="colorPrimaryDark">#FF672B</color>
-    <color name="colorAccent">#FF690F</color>
-    <color name="ButtonNormal">#FF9800</color>
-    <color name="textColor">#616161</color>
-    <color name="scoreColor">#000000</color>
+    <color name="colorPrimary">#4F5D68</color>
+    <color name="colorPrimaryDark">#112132</color>
+    <color name="colorAccent">#DA2132</color>
+    <color name="ButtonNormal">#4F5D68</color>
+    <color name="textColor">#FEFEFE</color>
+    <color name="scoreColor">#FEFEFE</color>
+<!--    <color name="textColor">#04052E</color>
+    <color name="scoreColor">#04052E</color>-->
 </resources>
