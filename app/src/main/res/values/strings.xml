@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Show Jumping Chrono</string>
+    <string name="rider_name">Rider name</string>
+    <string name="horse_name">Horse name</string>
+    <string name="score1">0</string>
+    <string name="four_pens">+ 4</string>
+    <string name="one_pen">+ 1</string>
+    <string name="reset">reset</string>
+    <string name="chrono_start">start</string>
+    <string name="chrono_stop">stop</string>
+    <string name="table_layout_chrono">chrono</string>
+    <string name="table_layout_course_pens">course penalties</string>
+    <string name="table_layout_time_pens">time penalties</string>
+    <string name="table_layout_total_pens">total penalties</string>
+</resources>
