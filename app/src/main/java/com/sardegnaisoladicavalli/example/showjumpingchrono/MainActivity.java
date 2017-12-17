@@ -4,6 +4,8 @@ import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.Chronometer;
 import android.widget.TextView;
 
 import com.sardegnaisoladicavalli.example.showjumpingchrono.R;
@@ -34,6 +36,41 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        CustomChrono mChronometer = (CustomChrono) findViewById(R.id.chronometer);
+/*      Button start = (Button) findViewById(R.id.startButton);
+        Button stop = (Button) findViewById(R.id.stopButton);*/
+
+
+        public void startChrono () {
+            mChronometer.start();
+        }
+
+
+
+    }
+}
+
+
+        /*I HAVE DONE MANY TRIALS - UNUSED BIT OF CODE
+
+        start.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Chronometer mChronometer = (Chronometer) findViewById(R.id.chronometer);
+                mChronometer.start();
+            }
+            });
+
+        stop.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Chronometer mChronometer = (Chronometer) findViewById(R.id.chronometer);
+                mChronometer.stop();
+            }
+        });*/
+
+
+
 
 /*        TableView<String[]> tableRows = (TableView<String[]>) findViewById(R.id.result_table);
         TableColumnWeightModel columnModel = new TableColumnWeightModel(3);
@@ -47,5 +84,3 @@ public class MainActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= 17) {
             tableRows.setTextAlignment(TEXT_ALIGNMENT_TEXT_END);
         }*/
-    }
-}
