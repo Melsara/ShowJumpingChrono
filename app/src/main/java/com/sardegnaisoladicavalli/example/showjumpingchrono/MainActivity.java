@@ -1,21 +1,8 @@
 package com.sardegnaisoladicavalli.example.showjumpingchrono;
 
-import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Chronometer;
-import android.widget.TextView;
-
-import com.sardegnaisoladicavalli.example.showjumpingchrono.R;
-
-import de.codecrafters.tableview.TableView;
-import de.codecrafters.tableview.model.TableColumnWeightModel;
-import de.codecrafters.tableview.toolkit.SimpleTableDataAdapter;
-
-import static android.view.View.TEXT_ALIGNMENT_CENTER;
-import static android.view.View.TEXT_ALIGNMENT_TEXT_END;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,9 +11,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String ROW_3 = "Time penalties";
     private static final String ROW_4 = "Total penalties";
 
-    CustomChrono mChronometer = (CustomChrono) findViewById(R.id.chronometer);
-    Button start = (Button) findViewById(R.id.startButton);
-    Button stop = (Button) findViewById(R.id.stopButton);
+    CustomChrono mChronometer;
 
 
 /*    private final String[][] DATA_TO_SHOW = {
@@ -40,18 +25,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
+         mChronometer = (CustomChrono) findViewById(R.id.chronometer);
 
 
     }
+
 
     public void startChrono (View view) {
         mChronometer.start();
     }
 
     public void stopChrono (View view) {
-        mChronometer.start();
+        mChronometer.stop();
     }
 }
 
