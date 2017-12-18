@@ -49,12 +49,13 @@
                     android:textColor="@color/textColor"
                     android:textSize="@dimen/fontSizeTitle" />
 
-                <Chronometer
-                    android:id="@+id/simpleChronometer"
+                <com.sardegnaisoladicavalli.example.showjumpingchrono.CustomChrono
+                    android:id="@+id/chronometer"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:textColor="@color/ButtonNormal"
+                    android:text="Chronometer"
                     android:textSize="@dimen/chronoSize" />
 
                 <LinearLayout
@@ -105,7 +106,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/chrono_start"
-                        android:textColor="@color/textColor" />
+                        android:textColor="@color/textColor"
+                        android:onClick="startChrono"/>
 
                     <Button
                         android:id="@+id/stopButton"
@@ -113,6 +115,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/chrono_stop"
+                        android:onClick="stopChrono"
                         android:textColor="@color/textColor" />
 
                 </LinearLayout>

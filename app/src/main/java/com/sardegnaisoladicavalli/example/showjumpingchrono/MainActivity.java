@@ -24,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
     private static final String ROW_3 = "Time penalties";
     private static final String ROW_4 = "Total penalties";
 
+    CustomChrono mChronometer = (CustomChrono) findViewById(R.id.chronometer);
+    Button start = (Button) findViewById(R.id.startButton);
+    Button stop = (Button) findViewById(R.id.stopButton);
+
 
 /*    private final String[][] DATA_TO_SHOW = {
             {ROW_1, " ", "0"},
@@ -36,17 +40,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        CustomChrono mChronometer = (CustomChrono) findViewById(R.id.chronometer);
-/*      Button start = (Button) findViewById(R.id.startButton);
-        Button stop = (Button) findViewById(R.id.stopButton);*/
-
-
-        public void startChrono () {
-            mChronometer.start();
-        }
 
 
 
+
+    }
+
+    public void startChrono (View view) {
+        mChronometer.start();
+    }
+
+    public void stopChrono (View view) {
+        mChronometer.start();
     }
 }
 
