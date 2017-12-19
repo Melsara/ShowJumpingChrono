@@ -234,7 +234,8 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="@dimen/screenBottom_margin"
                 android:text="@string/reset"
-                android:textColor="@color/textColor" />
+                android:textColor="@color/textColor"
+                android:onClick="resetAll"/>
 
         </RelativeLayout>
 

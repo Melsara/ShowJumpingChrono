@@ -78,6 +78,20 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void resetAll (View view) {
+        mChronometer.setBase(SystemClock.elapsedRealtime());
+        timeWhenStopped = 0;
+        timeDisplayed = "00:00:00";
+        coursePens = 0;
+        timePens = 0;
+        totalPens = 0;
+        displayTimeSet(timeDisplayed);
+        displayCoursePens(coursePens);
+        displayTimePens(timePens);
+        displayTotalPens(totalPens);
+
+    }
+
 
 }
 
