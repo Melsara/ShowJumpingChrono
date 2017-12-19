@@ -1,5 +1,6 @@
 package com.sardegnaisoladicavalli.example.showjumpingchrono;
 
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String ROW_4 = "Total penalties";
 
     CustomChrono mChronometer;
+
+    long timeWhenStopped = 0;
 
 
 /*    private final String[][] DATA_TO_SHOW = {
@@ -32,10 +35,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void startChrono (View view) {
+        mChronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
         mChronometer.start();
     }
 
     public void stopChrono (View view) {
+        timeWhenStopped = mChronometer.getBase() - SystemClock.elapsedRealtime();
         mChronometer.stop();
     }
 }
