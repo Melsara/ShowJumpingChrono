@@ -4,6 +4,7 @@ import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     CustomChrono mChronometer;
 
     long timeWhenStopped = 0;
+    String timeDisplayed;
 
 
 /*    private final String[][] DATA_TO_SHOW = {
@@ -33,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Displays the time.
+     * @param timeDisplayed
+     */
+    public void displayTimeSet (String timeDisplayed) {
+        TextView scoreView = (TextView) findViewById(R.id.time_set);
+        scoreView.setText(String.valueOf(timeDisplayed));
+    }
 
     public void startChrono (View view) {
         mChronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
@@ -42,7 +52,12 @@ public class MainActivity extends AppCompatActivity {
     public void stopChrono (View view) {
         timeWhenStopped = mChronometer.getBase() - SystemClock.elapsedRealtime();
         mChronometer.stop();
+        timeDisplayed = (String) mChronometer.getText();
+        displayTimeSet(timeDisplayed);
     }
+
+
+
 }
 
 

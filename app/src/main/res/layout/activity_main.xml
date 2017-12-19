@@ -161,6 +161,7 @@
                         android:textColor="@color/scoreColor" />
 
                     <TextView
+                        android:id="@+id/time_set"
                         android:gravity="center"
                         android:padding="@dimen/table_element_padding"
                         android:text="0"
@@ -178,6 +179,7 @@
                         android:textColor="@color/scoreColor" />
 
                     <TextView
+                        android:id="@+id/course_pens"
                         android:gravity="center"
                         android:padding="@dimen/table_element_padding"
                         android:text="0"
@@ -195,6 +197,7 @@
                         android:textColor="@color/scoreColor" />
 
                     <TextView
+                        android:id="@+id/time_pens"
                         android:gravity="center"
                         android:padding="@dimen/table_element_padding"
                         android:text="0"
@@ -212,6 +215,7 @@
                         android:textColor="@color/scoreColor" />
 
                     <TextView
+                        android:id="@+id/total_pens"
                         android:gravity="center"
                         android:padding="@dimen/table_element_padding"
                         android:text="0"
