@@ -74,7 +74,8 @@
                         android:layout_marginTop="@dimen/button_margin"
                         android:layout_weight="1"
                         android:text="@string/one_pen"
-                        android:textColor="@color/textColor" />
+                        android:textColor="@color/textColor"
+                        android:onClick="addTimePens"/>
 
                     <Button
                         android:id="@+id/four_pens"
@@ -86,7 +87,8 @@
                         android:layout_marginTop="@dimen/button_margin"
                         android:layout_weight="1"
                         android:text="@string/four_pens"
-                        android:textColor="@color/textColor" />
+                        android:textColor="@color/textColor"
+                        android:onClick="addCoursePens"/>
 
                 </LinearLayout>
 
