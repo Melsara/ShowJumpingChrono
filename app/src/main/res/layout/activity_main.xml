@@ -44,7 +44,7 @@
                         android:layout_marginBottom="@dimen/text_margin"
                         android:layout_marginLeft="@dimen/text_margin"
                         android:layout_marginRight="@dimen/text_margin"
-                        android:layout_marginTop="@dimen/edit_Text_Top_Margin"
+                        android:layout_marginTop="@dimen/text_margin"
                         android:cursorVisible="false"
                         android:gravity="center_horizontal"
                         android:hint="@string/rider_name"
@@ -199,7 +199,7 @@
                         android:id="@+id/time_set"
                         android:gravity="center"
                         android:padding="@dimen/table_element_padding"
-                        android:text="0"
+                        android:text="00:00:00"
                         android:textColor="@color/scoreColor" />
                 </TableRow>
 

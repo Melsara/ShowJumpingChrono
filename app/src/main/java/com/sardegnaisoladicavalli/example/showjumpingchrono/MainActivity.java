@@ -14,9 +14,9 @@ public class MainActivity extends AppCompatActivity {
 
     CustomChrono mChronometer;
     long timeWhenStopped = 0;
-    String timeDisplayed;
-    String riderNsme;
-    String horseNsme;
+    String timeDisplayed = "00:00:00";
+    String riderName;
+    String horseName;
     int coursePens = 0;
     int timePens = 0;
     int totalPens = 0;
@@ -38,12 +38,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void getRiderName (View view) {
         EditText simpleEditText = (EditText) findViewById(R.id.rider_name);
-        riderNsme = simpleEditText.getText().toString();
+        riderName = simpleEditText.getText().toString();
     }
 
     public void getHorseName (View view) {
         EditText simpleEditText = (EditText) findViewById(R.id.horse_name);
-        horseNsme = simpleEditText.getText().toString();
+        horseName = simpleEditText.getText().toString();
     }
 
     @Override
@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
         // killed and restarted.
         savedInstanceState.putLong("timeWhenStopped", timeWhenStopped);
         savedInstanceState.putString("timeDisplayed", timeDisplayed);
-        savedInstanceState.putString("riderName", riderNsme);
-        savedInstanceState.putString("horseName", horseNsme);
+        savedInstanceState.putString("riderName", riderName);
+        savedInstanceState.putString("horseName", horseName);
         savedInstanceState.putInt("coursePens", coursePens);
         savedInstanceState.putInt("timePens", timePens);
         savedInstanceState.putInt("totalPens", totalPens);
@@ -112,10 +112,20 @@ public class MainActivity extends AppCompatActivity {
         timeView.setText(String.valueOf(timePens));
     }
 
-    public void displayTotalPens (int totalPens){
+    public void displayTotalPens (int totalPens) {
         TextView totalView = (TextView) findViewById(R.id.total_pens);
         totalPens = timePens + coursePens;
         totalView.setText(String.valueOf(totalPens));
+    }
+
+    public void displayRiderName (String riderName){
+        TextView timeView = (TextView) findViewById(R.id.rider_name);
+        timeView.setText(String.valueOf(riderName));
+    }
+
+    public void displayHorseName (String horseName){
+        TextView timeView = (TextView) findViewById(R.id.horse_name);
+        timeView.setText(String.valueOf(horseName));
     }
 
     public void addCoursePens (View view) {
@@ -139,11 +149,14 @@ public class MainActivity extends AppCompatActivity {
         coursePens = 0;
         timePens = 0;
         totalPens = 0;
+        riderName = " ";
+        horseName = " ";
         displayTimeSet(timeDisplayed);
         displayCoursePens(coursePens);
         displayTimePens(timePens);
         displayTotalPens(totalPens);
-
+        displayRiderName(riderName);
+        displayHorseName(horseName);
     }
 
 
