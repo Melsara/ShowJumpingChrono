@@ -24,7 +24,31 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
          mChronometer = (CustomChrono) findViewById(R.id.chronometer);
 
+    }
 
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        // Save UI state changes to the savedInstanceState.
+        // This bundle will be passed to onCreate if the process is
+        // killed and restarted.
+        savedInstanceState.putLong("timeWhenStopped", timeWhenStopped);
+        savedInstanceState.putString("timeDisplayed", timeDisplayed);
+        savedInstanceState.putInt("coursePens", coursePens);
+        savedInstanceState.putInt("timePens", timePens);
+        savedInstanceState.putInt("totalPens", totalPens);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        // Restore UI state from the savedInstanceState.
+        // This bundle has also been passed to onCreate.
+        long timeWhenStopped  = (long) savedInstanceState.getLong("timeWhenStopped");
+        String timeDisplayed = savedInstanceState.getString("timeDisplayed");
+        int  coursePens = savedInstanceState.getInt("coursePens");
+        int  timePens = savedInstanceState.getInt("timePens");
+        int  totalPens = savedInstanceState.getInt("totalPens");
     }
 
     /**

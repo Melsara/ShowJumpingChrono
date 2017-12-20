@@ -6,6 +6,7 @@ package com.sardegnaisoladicavalli.example.showjumpingchrono;
 
 /*
  * The Android chronometer widget revised so as to count milliseconds
+ * https://github.com/antoniom/Millisecond-Chronometer/
  */
 
 import android.content.Context;
