@@ -1,10 +1,12 @@
 package com.sardegnaisoladicavalli.example.showjumpingchrono;
 
+import android.content.Context;
 import android.os.SystemClock;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -71,6 +73,12 @@ public class MainActivity extends AppCompatActivity {
         int  coursePens = savedInstanceState.getInt("coursePens");
         int  timePens = savedInstanceState.getInt("timePens");
         int  totalPens = savedInstanceState.getInt("totalPens");
+    }
+
+    public void onClick(View view) {
+        InputMethodManager imm = (InputMethodManager) view.getContext()
+                .getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
     }
 
     /**
