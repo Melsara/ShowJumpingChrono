@@ -1,9 +1,11 @@
 package com.sardegnaisoladicavalli.example.showjumpingchrono;
 
 import android.os.SystemClock;
+import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -11,6 +13,8 @@ public class MainActivity extends AppCompatActivity {
     CustomChrono mChronometer;
     long timeWhenStopped = 0;
     String timeDisplayed;
+    String riderNsme;
+    String horseNsme;
     int coursePens = 0;
     int timePens = 0;
     int totalPens = 0;
@@ -22,8 +26,22 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        final TextInputLayout riderInputLayout = (TextInputLayout) findViewById(R.id.rider_name_text_input_layout);
+        final TextInputLayout horseInputLayout = (TextInputLayout) findViewById(R.id.horse_name_text_input_layout);
+        riderInputLayout.setHint("Rider name");
+        horseInputLayout.setHint("Horse name");
          mChronometer = (CustomChrono) findViewById(R.id.chronometer);
 
+    }
+
+    public void getRiderName (View view) {
+        EditText simpleEditText = (EditText) findViewById(R.id.rider_name);
+        riderNsme = simpleEditText.getText().toString();
+    }
+
+    public void getHorseName (View view) {
+        EditText simpleEditText = (EditText) findViewById(R.id.horse_name);
+        horseNsme = simpleEditText.getText().toString();
     }
 
     @Override
@@ -34,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         // killed and restarted.
         savedInstanceState.putLong("timeWhenStopped", timeWhenStopped);
         savedInstanceState.putString("timeDisplayed", timeDisplayed);
+        savedInstanceState.putString("riderName", riderNsme);
+        savedInstanceState.putString("horseName", horseNsme);
         savedInstanceState.putInt("coursePens", coursePens);
         savedInstanceState.putInt("timePens", timePens);
         savedInstanceState.putInt("totalPens", totalPens);
@@ -46,6 +66,8 @@ public class MainActivity extends AppCompatActivity {
         // This bundle has also been passed to onCreate.
         long timeWhenStopped  = (long) savedInstanceState.getLong("timeWhenStopped");
         String timeDisplayed = savedInstanceState.getString("timeDisplayed");
+        String riderName= savedInstanceState.getString("riderName");
+        String horseName = savedInstanceState.getString("horseName");
         int  coursePens = savedInstanceState.getInt("coursePens");
         int  timePens = savedInstanceState.getInt("timePens");
         int  totalPens = savedInstanceState.getInt("totalPens");
