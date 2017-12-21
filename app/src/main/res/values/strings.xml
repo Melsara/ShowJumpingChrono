@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Show Jumping Chrono</string>
-    <string name="rider_name">Rider name</string>
-    <string name="horse_name">Horse name</string>
+    <string name="rider_name">Insert rider name</string>
+    <string name="horse_name">Insert horse name</string>
     <string name="score1">0</string>
     <string name="four_pens">+ 4</string>
     <string name="one_pen">+ 1</string>

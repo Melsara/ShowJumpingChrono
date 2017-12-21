@@ -7,7 +7,7 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorButtonNormal">@color/ButtonNormal</item>
-        <item name="android:fontFamily" tools:targetApi="16">sans-serif-medium</item>
+        <item name="android:fontFamily" tools:targetApi="16">@font/sansnarrowwebregular</item>
     </style>
 
 </resources>
