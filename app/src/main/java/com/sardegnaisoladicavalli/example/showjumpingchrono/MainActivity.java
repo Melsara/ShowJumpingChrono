@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         final TextInputLayout riderInputLayout = (TextInputLayout) findViewById(R.id.rider_name_text_input_layout);
         final TextInputLayout horseInputLayout = (TextInputLayout) findViewById(R.id.horse_name_text_input_layout);
-        riderInputLayout.setHint("Rider name");
-        horseInputLayout.setHint("Horse name");
          mChronometer = (CustomChrono) findViewById(R.id.chronometer);
 
     }
@@ -161,51 +159,3 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
-
-
-        /*I HAVE DONE MANY TRIALS - UNUSED BIT OF CODE
-
-            private final String[][] DATA_TO_SHOW = {
-            {ROW_1, " ", "0"},
-            {ROW_2, " ", "0"},
-            {ROW_3, " ", "0"},
-            {ROW_4, " ", "0"}
-    };
-
-    private static final String ROW_1 = "Chrono";
-    private static final String ROW_2 = "Course penalties";
-    private static final String ROW_3 = "Time penalties";
-    private static final String ROW_4 = "Total penalties";
-
-
-        start.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Chronometer mChronometer = (Chronometer) findViewById(R.id.chronometer);
-                mChronometer.start();
-            }
-            });
-
-        stop.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View v) {
-                Chronometer mChronometer = (Chronometer) findViewById(R.id.chronometer);
-                mChronometer.stop();
-            }
-        });*/
-
-
-
-
-/*        TableView<String[]> tableRows = (TableView<String[]>) findViewById(R.id.result_table);
-        TableColumnWeightModel columnModel = new TableColumnWeightModel(3);
-        columnModel.setColumnWeight(1, 3);
-        columnModel.setColumnWeight(2, 1);
-        columnModel.setColumnWeight(3, 1);
-        tableRows.setColumnCount(3);
-        tableRows.setHeaderVisible(false);
-        tableRows.setColumnModel(columnModel);
-        tableRows.setDataAdapter(new SimpleTableDataAdapter(this, DATA_TO_SHOW));
-        if (Build.VERSION.SDK_INT >= 17) {
-            tableRows.setTextAlignment(TEXT_ALIGNMENT_TEXT_END);
-        }*/
