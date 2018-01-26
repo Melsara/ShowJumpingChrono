@@ -12,4 +12,6 @@
     <string name="table_layout_course_pens">course penalties</string>
     <string name="table_layout_time_pens">time penalties</string>
     <string name="table_layout_total_pens">total penalties</string>
+    <string name="rider_1">Rider 1</string>
+    <string name="rider_2">Rider 2</string>
 </resources>

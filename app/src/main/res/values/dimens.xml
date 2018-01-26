@@ -14,4 +14,6 @@
     <dimen name="fontSizeTitleBig">34sp</dimen>
     <dimen name="chronoSize">56sp</dimen>
     <dimen name="edit_Text_Top_Margin">16dp</dimen>
+    <dimen name="nameSize">36sp</dimen>
+    <dimen name="scoreSize">24sp</dimen>
 </resources>

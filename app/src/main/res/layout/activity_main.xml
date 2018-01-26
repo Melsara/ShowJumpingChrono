@@ -82,7 +82,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/button_sideMargin"
                         android:layout_marginRight="@dimen/button_sideMargin"
-                        android:text="Rider 1"
+                        android:gravity="center"
+                        android:textSize="@dimen/nameSize"
+                        android:text="@string/rider_1"
                         android:textColor="@color/scoreColor" />
 
                     <Button
@@ -121,7 +123,7 @@
                         android:layout_marginBottom="@dimen/text_margin"
                         android:layout_marginRight="@dimen/table_sideMargin"
                         android:layout_marginTop="@dimen/button_margin"
-                        android:shrinkColumns="*">
+                        android:layout_gravity="left">
 
                         <TableRow>
                             <TextView
@@ -139,6 +141,7 @@
                                 android:gravity="left"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="00:00:00"
+                                android:textSize="@dimen/scoreSize"
                                 android:textColor="@color/scoreColor" />
                         </TableRow>
 
@@ -158,6 +161,7 @@
                                 android:gravity="left"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="0"
+                                android:textSize="@dimen/scoreSize"
                                 android:textColor="@color/scoreColor" />
                         </TableRow>
 
@@ -177,6 +181,7 @@
                                 android:gravity="left"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="0"
+                                android:textSize="@dimen/scoreSize"
                                 android:textColor="@color/scoreColor" />
                         </TableRow>
 
@@ -196,6 +201,7 @@
                                 android:gravity="left"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="0"
+                                android:textSize="@dimen/scoreSize"
                                 android:textColor="@color/scoreColor" />
                         </TableRow>
 
@@ -220,8 +226,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/button_sideMargin"
                         android:layout_marginRight="@dimen/button_sideMargin"
-                        android:gravity="right"
-                        android:text="Rider 2"
+                        android:gravity="center"
+                        android:textSize="@dimen/nameSize"
+                        android:text="@string/rider_2"
                         android:textColor="@color/scoreColor" />
 
                     <Button
@@ -233,7 +240,7 @@
                         android:layout_marginRight="@dimen/button_sideMargin"
                         android:layout_marginTop="@dimen/button_margin"
                         android:layout_weight="1"
-                        android:onClick="addTimePens"
+                        android:onClick="addTimePens2"
                         android:text="@string/one_pen"
                         android:textColor="@color/textColor"
                         android:textStyle="bold" />
@@ -247,7 +254,7 @@
                         android:layout_marginRight="@dimen/button_sideMargin"
                         android:layout_marginTop="@dimen/button_margin"
                         android:layout_weight="1"
-                        android:onClick="addCoursePens"
+                        android:onClick="addCoursePens2"
                         android:text="@string/four_pens"
                         android:textColor="@color/textColor"
                         android:textStyle="bold" />
@@ -260,7 +267,7 @@
                         android:layout_marginBottom="@dimen/text_margin"
                         android:layout_marginLeft="@dimen/table_sideMargin"
                         android:layout_marginTop="@dimen/button_margin"
-                        android:shrinkColumns="*">
+                        android:layout_gravity="right">
 
                         <TableRow>
                             <TextView
@@ -278,13 +285,13 @@
                                 android:gravity="right"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="00:00:00"
+                                android:textSize="@dimen/scoreSize"
                                 android:textColor="@color/scoreColor" />
                         </TableRow>
 
                         <TableRow>
                             <TextView
-                                android:layout_gravity="right"
-                                android:layout_marginRight="@dimen/text_margin"
+                                android:gravity="right"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="@string/table_layout_course_pens"
                                 android:textAllCaps="true"
@@ -297,13 +304,13 @@
                                 android:gravity="right"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="0"
+                                android:textSize="@dimen/scoreSize"
                                 android:textColor="@color/scoreColor" />
                         </TableRow>
 
                         <TableRow>
                             <TextView
-                                android:layout_gravity="right"
-                                android:layout_marginRight="@dimen/text_margin"
+                                android:gravity="right"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="@string/table_layout_time_pens"
                                 android:textAllCaps="true"
@@ -316,13 +323,13 @@
                                 android:gravity="right"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="0"
+                                android:textSize="@dimen/scoreSize"
                                 android:textColor="@color/scoreColor" />
                         </TableRow>
 
                         <TableRow>
                             <TextView
                                 android:layout_gravity="right"
-                                android:layout_marginRight="@dimen/text_margin"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="@string/table_layout_total_pens"
                                 android:textAllCaps="true"
@@ -335,6 +342,7 @@
                                 android:gravity="right"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="0"
+                                android:textSize="@dimen/scoreSize"
                                 android:textColor="@color/scoreColor" />
                         </TableRow>
 
@@ -353,6 +361,7 @@
             android:layout_below="@id/main_container"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/screenBottom_margin"
+            android:layout_marginTop="@dimen/screenBottom_margin"
             android:onClick="resetAll"
             android:text="@string/reset"
             android:textColor="@color/textColor"
