@@ -14,4 +14,5 @@
     <string name="table_layout_total_pens">total penalties</string>
     <string name="rider_1">Rider 1</string>
     <string name="rider_2">Rider 2</string>
+    <string name="team_total">Total team penalties</string>
 </resources>

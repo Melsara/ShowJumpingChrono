@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     int coursePens2 = 0;
     int timePens2 = 0;
     int totalPens2 = 0;
+    int totalTeamPens = 0;
     final int COURSE_PENS = 4;
     final int TIME_PEN = 1;
     final int COURSE_PENS2 = 4;
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putInt("coursePens2", coursePens2);
         savedInstanceState.putInt("timePens2", timePens2);
         savedInstanceState.putInt("totalPens2", totalPens2);
+        savedInstanceState.putInt("totalPens2", totalTeamPens);
     }
 
     public void onClick(View view) {
@@ -100,43 +102,53 @@ public class MainActivity extends AppCompatActivity {
         timeViewPens2.setText(String.valueOf(timePens2));
     }
 
-    public void displayTotalPens (int totalPens) {
+    public void displayTotalPens () {
         TextView totalView = (TextView) findViewById(R.id.total_pens);
         totalPens = timePens + coursePens;
         totalView.setText(String.valueOf(totalPens));
     }
 
-    public void displayTotalPens2 (int totalPens) {
+    public void displayTotalPens2 () {
         TextView totalView2 = (TextView) findViewById(R.id.total_pens2);
         totalPens2 = timePens2 + coursePens2;
         totalView2.setText(String.valueOf(totalPens2));
     }
 
+    public void displayTeamPens (){
+        TextView teamPens = (TextView) findViewById(R.id.total_TeamPens);
+        totalTeamPens = totalPens + totalPens2;
+        teamPens.setText(String.valueOf(totalTeamPens));
+    }
+
     public void addCoursePens (View view) {
         coursePens = coursePens + COURSE_PENS;
         displayCoursePens(coursePens);
-        displayTotalPens(totalPens);
+        displayTotalPens();
+        displayTeamPens();
 
     }
 
     public void addCoursePens2 (View view) {
         coursePens2 = coursePens2 + COURSE_PENS2;
         displayCoursePens2(coursePens2);
-        displayTotalPens2(totalPens2);
+        displayTotalPens2();
+        displayTeamPens();
 
     }
 
     public void addTimePens (View view) {
         timePens = timePens + TIME_PEN;
         displayTimePens(timePens);
-        displayTotalPens(totalPens);
+        displayTotalPens();
+        displayTeamPens();
 
     }
 
     public void addTimePens2 (View view) {
         timePens2 = timePens2 + TIME_PEN2;
         displayTimePens2(timePens2);
-        displayTotalPens2(totalPens2);
+        displayTotalPens2();
+        displayTeamPens();
 
     }
 
@@ -150,13 +162,15 @@ public class MainActivity extends AppCompatActivity {
         coursePens2 = 0;
         timePens2 = 0;
         totalPens2 = 0;
+        totalTeamPens = 0;
         displayTimeSet(timeDisplayed);
         displayCoursePens(coursePens);
         displayCoursePens2(coursePens2);
         displayTimePens(timePens);
         displayTimePens2(timePens2);
-        displayTotalPens(totalPens);
-        displayTotalPens2(totalPens);
+        displayTotalPens();
+        displayTotalPens2();
+        displayTeamPens();
 
     }
 

@@ -83,9 +83,9 @@
                         android:layout_marginLeft="@dimen/button_sideMargin"
                         android:layout_marginRight="@dimen/button_sideMargin"
                         android:gravity="center"
-                        android:textSize="@dimen/nameSize"
                         android:text="@string/rider_1"
-                        android:textColor="@color/scoreColor" />
+                        android:textColor="@color/scoreColor"
+                        android:textSize="@dimen/nameSize" />
 
                     <Button
                         android:id="@+id/one_pen"
@@ -120,12 +120,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/main_container"
+                        android:layout_gravity="left"
                         android:layout_marginBottom="@dimen/text_margin"
                         android:layout_marginRight="@dimen/table_sideMargin"
-                        android:layout_marginTop="@dimen/button_margin"
-                        android:layout_gravity="left">
+                        android:layout_marginTop="@dimen/button_margin">
 
                         <TableRow>
+
                             <TextView
                                 android:layout_gravity="left"
                                 android:layout_marginRight="@dimen/text_margin"
@@ -136,16 +137,18 @@
                         </TableRow>
 
                         <TableRow>
+
                             <TextView
                                 android:id="@+id/time_set"
                                 android:gravity="left"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="00:00:00"
-                                android:textSize="@dimen/scoreSize"
-                                android:textColor="@color/scoreColor" />
+                                android:textColor="@color/scoreColor"
+                                android:textSize="@dimen/scoreSize" />
                         </TableRow>
 
                         <TableRow>
+
                             <TextView
                                 android:layout_gravity="left"
                                 android:layout_marginRight="@dimen/text_margin"
@@ -156,16 +159,18 @@
                         </TableRow>
 
                         <TableRow>
+
                             <TextView
                                 android:id="@+id/course_pens"
                                 android:gravity="left"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="0"
-                                android:textSize="@dimen/scoreSize"
-                                android:textColor="@color/scoreColor" />
+                                android:textColor="@color/scoreColor"
+                                android:textSize="@dimen/scoreSize" />
                         </TableRow>
 
                         <TableRow>
+
                             <TextView
                                 android:layout_gravity="left"
                                 android:layout_marginRight="@dimen/text_margin"
@@ -176,16 +181,18 @@
                         </TableRow>
 
                         <TableRow>
+
                             <TextView
                                 android:id="@+id/time_pens"
                                 android:gravity="left"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="0"
-                                android:textSize="@dimen/scoreSize"
-                                android:textColor="@color/scoreColor" />
+                                android:textColor="@color/scoreColor"
+                                android:textSize="@dimen/scoreSize" />
                         </TableRow>
 
                         <TableRow>
+
                             <TextView
                                 android:layout_gravity="left"
                                 android:layout_marginRight="@dimen/text_margin"
@@ -196,13 +203,14 @@
                         </TableRow>
 
                         <TableRow>
+
                             <TextView
                                 android:id="@+id/total_pens"
                                 android:gravity="left"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="0"
-                                android:textSize="@dimen/scoreSize"
-                                android:textColor="@color/scoreColor" />
+                                android:textColor="@color/scoreColor"
+                                android:textSize="@dimen/scoreSize" />
                         </TableRow>
 
                     </TableLayout>
@@ -227,9 +235,9 @@
                         android:layout_marginLeft="@dimen/button_sideMargin"
                         android:layout_marginRight="@dimen/button_sideMargin"
                         android:gravity="center"
-                        android:textSize="@dimen/nameSize"
                         android:text="@string/rider_2"
-                        android:textColor="@color/scoreColor" />
+                        android:textColor="@color/scoreColor"
+                        android:textSize="@dimen/nameSize" />
 
                     <Button
                         android:id="@+id/one_pen2"
@@ -264,12 +272,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/main_container"
+                        android:layout_gravity="right"
                         android:layout_marginBottom="@dimen/text_margin"
                         android:layout_marginLeft="@dimen/table_sideMargin"
-                        android:layout_marginTop="@dimen/button_margin"
-                        android:layout_gravity="right">
+                        android:layout_marginTop="@dimen/button_margin">
 
                         <TableRow>
+
                             <TextView
                                 android:layout_gravity="right"
                                 android:layout_marginRight="@dimen/text_margin"
@@ -280,16 +289,18 @@
                         </TableRow>
 
                         <TableRow>
+
                             <TextView
                                 android:id="@+id/time_set2"
                                 android:gravity="right"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="00:00:00"
-                                android:textSize="@dimen/scoreSize"
-                                android:textColor="@color/scoreColor" />
+                                android:textColor="@color/scoreColor"
+                                android:textSize="@dimen/scoreSize" />
                         </TableRow>
 
                         <TableRow>
+
                             <TextView
                                 android:gravity="right"
                                 android:padding="@dimen/table_element_padding"
@@ -299,16 +310,18 @@
                         </TableRow>
 
                         <TableRow>
+
                             <TextView
                                 android:id="@+id/course_pens2"
                                 android:gravity="right"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="0"
-                                android:textSize="@dimen/scoreSize"
-                                android:textColor="@color/scoreColor" />
+                                android:textColor="@color/scoreColor"
+                                android:textSize="@dimen/scoreSize" />
                         </TableRow>
 
                         <TableRow>
+
                             <TextView
                                 android:gravity="right"
                                 android:padding="@dimen/table_element_padding"
@@ -318,16 +331,18 @@
                         </TableRow>
 
                         <TableRow>
+
                             <TextView
                                 android:id="@+id/time_pens2"
                                 android:gravity="right"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="0"
-                                android:textSize="@dimen/scoreSize"
-                                android:textColor="@color/scoreColor" />
+                                android:textColor="@color/scoreColor"
+                                android:textSize="@dimen/scoreSize" />
                         </TableRow>
 
                         <TableRow>
+
                             <TextView
                                 android:layout_gravity="right"
                                 android:padding="@dimen/table_element_padding"
@@ -337,13 +352,14 @@
                         </TableRow>
 
                         <TableRow>
+
                             <TextView
                                 android:id="@+id/total_pens2"
                                 android:gravity="right"
                                 android:padding="@dimen/table_element_padding"
                                 android:text="0"
-                                android:textSize="@dimen/scoreSize"
-                                android:textColor="@color/scoreColor" />
+                                android:textColor="@color/scoreColor"
+                                android:textSize="@dimen/scoreSize" />
                         </TableRow>
 
                     </TableLayout>
@@ -354,11 +370,43 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/totalTextViews"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/main_container">
+
+            <TextView
+                android:id="@+id/total_TeamPensText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/table_element_padding"
+                android:text="@string/team_total"
+                android:gravity="right"
+                android:textColor="@color/scoreColor"
+                android:textSize="@dimen/scoreSize" />
+
+            <TextView
+                android:id="@+id/total_TeamPens"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/table_element_padding"
+                android:text="0"
+                android:textColor="@color/scoreColor"
+                android:textSize="@dimen/scoreSize"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
         <Button
             android:id="@+id/reset"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/main_container"
+            android:layout_below="@id/totalTextViews"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/screenBottom_margin"
             android:layout_marginTop="@dimen/screenBottom_margin"
