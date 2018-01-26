@@ -2,10 +2,10 @@
 
 <resources>
     <dimen name="button_margin">8dp</dimen>
-    <dimen name="table_element_padding">8dip</dimen>
-    <dimen name="button_sideMargin">24dp</dimen>
-    <dimen name="table_sideMargin">24dp</dimen>
-    <dimen name="screenBottom_margin">32dp</dimen>
+    <dimen name="table_element_padding">16dip</dimen>
+    <dimen name="button_sideMargin">16dp</dimen>
+    <dimen name="table_sideMargin">16dp</dimen>
+    <dimen name="screenBottom_margin">16dp</dimen>
     <dimen name="half_button_margin">4dp</dimen>
     <dimen name="text_margin">16dp</dimen>
     <dimen name="half_text_margin">8dp</dimen>
@@ -13,5 +13,5 @@
     <dimen name="fontSizeTitle">24sp</dimen>
     <dimen name="fontSizeTitleBig">34sp</dimen>
     <dimen name="chronoSize">56sp</dimen>
-    <dimen name="edit_Text_Top_Margin">24sp</dimen>
+    <dimen name="edit_Text_Top_Margin">16dp</dimen>
 </resources>
