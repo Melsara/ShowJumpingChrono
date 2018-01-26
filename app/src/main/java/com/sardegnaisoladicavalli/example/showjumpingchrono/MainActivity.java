@@ -15,33 +15,24 @@ public class MainActivity extends AppCompatActivity {
     CustomChrono mChronometer;
     long timeWhenStopped = 0;
     String timeDisplayed = "00:00:00";
-    String riderName;
-    String horseName;
     int coursePens = 0;
     int timePens = 0;
     int totalPens = 0;
+    int coursePens2 = 0;
+    int timePens2 = 0;
+    int totalPens2 = 0;
     final int COURSE_PENS = 4;
     final int TIME_PEN = 1;
+    final int COURSE_PENS2 = 4;
+    final int TIME_PEN2 = 1;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final TextInputLayout riderInputLayout = (TextInputLayout) findViewById(R.id.rider_name_text_input_layout);
-        final TextInputLayout horseInputLayout = (TextInputLayout) findViewById(R.id.horse_name_text_input_layout);
          mChronometer = (CustomChrono) findViewById(R.id.chronometer);
 
-    }
-
-    public void getRiderName (View view) {
-        EditText simpleEditText = (EditText) findViewById(R.id.rider_name);
-        riderName = simpleEditText.getText().toString();
-    }
-
-    public void getHorseName (View view) {
-        EditText simpleEditText = (EditText) findViewById(R.id.horse_name);
-        horseName = simpleEditText.getText().toString();
     }
 
     @Override
@@ -52,25 +43,12 @@ public class MainActivity extends AppCompatActivity {
         // killed and restarted.
         savedInstanceState.putLong("timeWhenStopped", timeWhenStopped);
         savedInstanceState.putString("timeDisplayed", timeDisplayed);
-        savedInstanceState.putString("riderName", riderName);
-        savedInstanceState.putString("horseName", horseName);
         savedInstanceState.putInt("coursePens", coursePens);
         savedInstanceState.putInt("timePens", timePens);
         savedInstanceState.putInt("totalPens", totalPens);
-    }
-
-    @Override
-    public void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        // Restore UI state from the savedInstanceState.
-        // This bundle has also been passed to onCreate.
-        long timeWhenStopped  = (long) savedInstanceState.getLong("timeWhenStopped");
-        String timeDisplayed = savedInstanceState.getString("timeDisplayed");
-        String riderName= savedInstanceState.getString("riderName");
-        String horseName = savedInstanceState.getString("horseName");
-        int  coursePens = savedInstanceState.getInt("coursePens");
-        int  timePens = savedInstanceState.getInt("timePens");
-        int  totalPens = savedInstanceState.getInt("totalPens");
+        savedInstanceState.putInt("coursePens2", coursePens2);
+        savedInstanceState.putInt("timePens2", timePens2);
+        savedInstanceState.putInt("totalPens2", totalPens2);
     }
 
     public void onClick(View view) {
@@ -85,7 +63,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public void displayTimeSet (String timeDisplayed) {
         TextView timeView = (TextView) findViewById(R.id.time_set);
+        TextView timeView2 = (TextView) findViewById(R.id.time_set2) ;
         timeView.setText(String.valueOf(timeDisplayed));
+        timeView2.setText(String.valueOf(timeDisplayed));
     }
 
     public void startChrono (View view) {
@@ -105,9 +85,19 @@ public class MainActivity extends AppCompatActivity {
         courseView.setText(String.valueOf(coursePens));
     }
 
+    public void displayCoursePens2 (int coursePens){
+        TextView courseView2 = (TextView) findViewById(R.id.course_pens2);
+        courseView2.setText(String.valueOf(coursePens2));
+    }
+
     public void displayTimePens (int timePens){
-        TextView timeView = (TextView) findViewById(R.id.time_pens);
-        timeView.setText(String.valueOf(timePens));
+        TextView timeViewPens = (TextView) findViewById(R.id.time_pens);
+        timeViewPens.setText(String.valueOf(timePens));
+    }
+
+    public void displayTimePens2 (int timePens2){
+        TextView timeViewPens2 = (TextView) findViewById(R.id.time_pens2);
+        timeViewPens2.setText(String.valueOf(timePens2));
     }
 
     public void displayTotalPens (int totalPens) {
@@ -116,20 +106,23 @@ public class MainActivity extends AppCompatActivity {
         totalView.setText(String.valueOf(totalPens));
     }
 
-    public void displayRiderName (String riderName){
-        TextView timeView = (TextView) findViewById(R.id.rider_name);
-        timeView.setText(String.valueOf(riderName));
-    }
-
-    public void displayHorseName (String horseName){
-        TextView timeView = (TextView) findViewById(R.id.horse_name);
-        timeView.setText(String.valueOf(horseName));
+    public void displayTotalPens2 (int totalPens) {
+        TextView totalView2 = (TextView) findViewById(R.id.total_pens2);
+        totalPens2 = timePens2 + coursePens2;
+        totalView2.setText(String.valueOf(totalPens2));
     }
 
     public void addCoursePens (View view) {
         coursePens = coursePens + COURSE_PENS;
         displayCoursePens(coursePens);
         displayTotalPens(totalPens);
+
+    }
+
+    public void addCoursePens2 (View view) {
+        coursePens2 = coursePens2 + COURSE_PENS2;
+        displayCoursePens2(coursePens2);
+        displayTotalPens2(totalPens2);
 
     }
 
@@ -140,6 +133,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void addTimePens2 (View view) {
+        timePens2 = timePens2 + TIME_PEN2;
+        displayTimePens2(timePens2);
+        displayTotalPens2(totalPens2);
+
+    }
+
     public void resetAll (View view) {
         mChronometer.setBase(SystemClock.elapsedRealtime());
         timeWhenStopped = 0;
@@ -147,14 +147,17 @@ public class MainActivity extends AppCompatActivity {
         coursePens = 0;
         timePens = 0;
         totalPens = 0;
-        riderName = " ";
-        horseName = " ";
+        coursePens2 = 0;
+        timePens2 = 0;
+        totalPens2 = 0;
         displayTimeSet(timeDisplayed);
         displayCoursePens(coursePens);
+        displayCoursePens2(coursePens2);
         displayTimePens(timePens);
+        displayTimePens2(timePens2);
         displayTotalPens(totalPens);
-        displayRiderName(riderName);
-        displayHorseName(horseName);
+        displayTotalPens2(totalPens);
+
     }
 
 
