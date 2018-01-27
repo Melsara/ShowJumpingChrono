@@ -13,44 +13,32 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     CustomChrono mChronometer;
-    long timeWhenStopped = 0;
-    String timeDisplayed = "00:00:00";
-    int coursePens = 0;
-    int timePens = 0;
-    int totalPens = 0;
-    int coursePens2 = 0;
-    int timePens2 = 0;
-    int totalPens2 = 0;
-    int totalTeamPens = 0;
+    long timeWhenStopped;
+    String timeDisplayed;
+    int coursePens;
+    int timePens;
+    int totalPens;
+    int coursePens2;
+    int timePens2;
+    int totalPens2;
+    int totalTeamPens;
     final int COURSE_PENS = 4;
     final int TIME_PEN = 1;
     final int COURSE_PENS2 = 4;
     final int TIME_PEN2 = 1;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-         mChronometer = (CustomChrono) findViewById(R.id.chronometer);
+        displayCoursePens(coursePens);
+        displayCoursePens2(coursePens2);
+        displayTimePens(timePens);
+        displayTimePens2(timePens2);
+        displayTotalPens();
+        displayTotalPens2();
+        displayTeamPens();
 
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle savedInstanceState) {
-        super.onSaveInstanceState(savedInstanceState);
-        // Save UI state changes to the savedInstanceState.
-        // This bundle will be passed to onCreate if the process is
-        // killed and restarted.
-        savedInstanceState.putLong("timeWhenStopped", timeWhenStopped);
-        savedInstanceState.putString("timeDisplayed", timeDisplayed);
-        savedInstanceState.putInt("coursePens", coursePens);
-        savedInstanceState.putInt("timePens", timePens);
-        savedInstanceState.putInt("totalPens", totalPens);
-        savedInstanceState.putInt("coursePens2", coursePens2);
-        savedInstanceState.putInt("timePens2", timePens2);
-        savedInstanceState.putInt("totalPens2", totalPens2);
-        savedInstanceState.putInt("totalPens2", totalTeamPens);
     }
 
     public void onClick(View view) {
@@ -71,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void startChrono (View view) {
+        mChronometer = (CustomChrono) findViewById(R.id.chronometer);
         mChronometer.setBase(SystemClock.elapsedRealtime() + timeWhenStopped);
         mChronometer.start();
     }
@@ -172,6 +161,34 @@ public class MainActivity extends AppCompatActivity {
         displayTotalPens2();
         displayTeamPens();
 
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putLong("timeWhenStopped", timeWhenStopped);
+        savedInstanceState.putString("timeDisplayed", timeDisplayed);
+        savedInstanceState.putInt("coursePens", coursePens);
+        savedInstanceState.putInt("timePens", timePens);
+        savedInstanceState.putInt("totalPens", totalPens);
+        savedInstanceState.putInt("coursePens2", coursePens2);
+        savedInstanceState.putInt("timePens2", timePens2);
+        savedInstanceState.putInt("totalPens2", totalPens2);
+        savedInstanceState.putInt("totalTeamPens", totalTeamPens);
+    }
+
+    @Override
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        long timeWhenStopped  = (long) savedInstanceState.getLong("timeWhenStopped");
+        String timeDisplayed = savedInstanceState.getString("timeDisplayed");
+        int  coursePens = savedInstanceState.getInt("coursePens");
+        int  timePens = savedInstanceState.getInt("timePens");
+        int  totalPens = savedInstanceState.getInt("totalPens");
+        int coursePens2 = savedInstanceState.getInt("coursePens2");
+        int timePens2 = savedInstanceState.getInt("timePens2");
+        int totalPens2 = savedInstanceState.getInt("totalPens2");
+        int totalTeamPens = savedInstanceState.getInt("totalTeamPens");
     }
 
 
